@@ -10,4 +10,6 @@ Rails.application.routes.draw do
       resources :items, only: [:index, :show, :destroy, :create]
     end
   end
+
+  post "search_stores" => "stores#search", as: :search
 end
