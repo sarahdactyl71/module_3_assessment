@@ -23,7 +23,11 @@ RSpec.describe "items API" do
   end
 
   it "can delete an item" do
+    item = create(:item)
 
+    delete "/api/v1/items/#{item.id}"
+
+    expect{(Destination.find(destination.id))}.to raise_error(ActiveRecord::RecordNotFound)
   end
 
   it "can create an item" do
