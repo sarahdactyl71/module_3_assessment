@@ -13,7 +13,13 @@ RSpec.describe "items API" do
   end
 
   it "can show and item" do
+    item = create(:item)
+    get "/api/v1/items/#{item.id}"
 
+    json = JSON.parse(response.body)
+
+    expect(response).to be_success
+    expect(json.length).to eq(6)
   end
 
   it "can delete an item" do
