@@ -1,6 +1,6 @@
 <div class="container">
 
-  <%= form_tag(search_path, :method => "post", id: "search-form") do %>
+  <%= form_tag(search_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search Stores" %>
     <%= submit_tag "Search", :name => nil %>
 <% end %>

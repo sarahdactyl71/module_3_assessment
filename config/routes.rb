@@ -11,5 +11,5 @@ Rails.application.routes.draw do
     end
   end
 
-  post "search" => "stores#search", as: :search
+  get "search" => "stores#search", as: :search
 end
