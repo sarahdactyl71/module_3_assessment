@@ -14,6 +14,7 @@ RSpec.describe "best buy api" do
     expect(page).to have_content(store.distance)
     expect(page).to have_content(store.phone)
     expect(page).to have_content(store.type)
+    expect(Bestbuy.count).to eq(10)
   end
 end
 
