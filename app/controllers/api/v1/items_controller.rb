@@ -11,4 +11,10 @@ class Api::V1::ItemsController < ApplicationController
   def destroy
     Item.find(params[:id]).delete
   end
+
+  private
+
+  def item_params
+    params.require(:item).permit(:name, :description, :image_url)
+  end
 end
