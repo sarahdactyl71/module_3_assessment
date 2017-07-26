@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe "best buy api" do
   it "can search the surrounding area" do
-    store = create(:store)
     visit root_path
 
     fill_in "Search", with: "80202"
