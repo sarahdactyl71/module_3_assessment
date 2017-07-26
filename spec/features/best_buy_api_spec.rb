@@ -4,7 +4,7 @@ RSpec.describe "best buy api" do
   it "can search the surrounding area" do
     visit root_path
 
-    fill_in "Search", with: "80202"
+    fill_in "search", with: "80202"
     click_on "Search"
 
     expect(current_path).to eq(search_path)
