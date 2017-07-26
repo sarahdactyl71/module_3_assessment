@@ -31,7 +31,13 @@ RSpec.describe "items API" do
   end
 
   it "can create an item" do
+    item_params = {name: "Thing", description: "Does stuff", image_url: "https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg" }
 
+    items = create_list(:item, 3)
+
+    post "/api/v1/items/", params: {item: item_params}
+
+    expect(Item.last.name).to eq("Thing")
   end
 
 end

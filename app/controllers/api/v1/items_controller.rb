@@ -9,7 +9,11 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def destroy
-    Item.find(params[:id]).delete
+    Item.find(params[:id]).destroy
+  end
+
+  def create
+    Item.create(item_params)
   end
 
   private
