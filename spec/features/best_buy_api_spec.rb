@@ -5,7 +5,7 @@ RSpec.describe "best buy api" do
     visit root_path
 
     fill_in "search", with: "80202"
-    click_on "Search"
+    click_on "Search Stores"
 
     expect(current_path).to eq(search_path)
     expect(page).to have_content("17 Total Stores")
