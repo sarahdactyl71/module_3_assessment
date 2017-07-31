@@ -8,7 +8,7 @@ RSpec.describe "best buy api" do
     click_on "Search Stores"
 
     expect(current_path).to eq(search_path)
-    # expect(page).to have_content("17 Total Stores")
+    expect(page).to have_content("17 Total Stores")
     expect(page).to have_content("Cherry Creek Shopping Center")
     expect(page).to have_content("Denver")
     expect(page).to have_content("3.45")
