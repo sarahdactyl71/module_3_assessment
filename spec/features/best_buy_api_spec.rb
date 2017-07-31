@@ -19,6 +19,7 @@ RSpec.describe "best buy api" do
     expect(page).to_not have_content("Grand Junction")
     expect(page).to_not have_content("23466")
     expect(page).to_not have_content("303-999-9189")
+    expect(page).to have_content("Current Page")
   end
 
   it "has pagination" do
@@ -31,7 +32,7 @@ RSpec.describe "best buy api" do
 
     click_on "2"
     expect(page).to have_content("Current Page")
-    
+
     expect(page).to have_content("17 Total Stores")
     expect(page).to have_content("I70 & Tower Rd")
     expect(page).to have_content("Aurora")
