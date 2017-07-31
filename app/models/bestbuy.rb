@@ -20,4 +20,12 @@ class Bestbuy
   def self.total_stores(zip)
     total = BestbuyService.total_stores(zip)
   end
+
+  def self.find_page(zip, page)
+    stores = BestbuyService.find_stores(zip, page)
+    stores.map do |store|
+      new(store)
+    end
+  end
+  
 end
