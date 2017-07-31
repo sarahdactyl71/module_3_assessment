@@ -19,20 +19,20 @@ RSpec.describe "best buy api" do
     expect(page).to_not have_content("Grand Junction")
     expect(page).to_not have_content("23466")
     expect(page).to_not have_content("303-999-9189")
+
+    expect(page).to have_content("Current Page")
+
+    click_on "2"
+
+    expect(page).to have_content("17 Total Stores")
+    expect(page).to have_content("I70 & Tower Rd")
+    expect(page).to have_content("Aurora")
+    expect(page).to have_content("11.65")
+    expect(page).to have_content("303-373-9284")
+    expect(page).to have_content("Big Box")
   end
 end
 
-# As a user
-# When I visit "/"
-# And I fill in a search box with "80202" and click "search"
-# Then my current path should be "/search" (ignoring params)
-# And I should see stores within 25 miles of 80202
-# And I should see a message that says "17 Total Stores"
-# And I should see exactly 10 results (There are 17 stores within 25 miles. We want to display 10 on this page and 7 on the next. Get the first page to work first from start to finish and worry about pagination later.)
-# And I should see the long name, city, distance, phone number and store type for each of the 10 results
-#
-# (Additional Functionality)
-#
 # And I should see pagination links below the search results for the number of pages (2 in this case)
 # And `1` is my current page but isn't a clickable link
 # And `2` is a clickable link
