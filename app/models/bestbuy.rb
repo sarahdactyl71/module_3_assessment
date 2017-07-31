@@ -16,4 +16,8 @@ class Bestbuy
       new(store)
     end
   end
+
+  def self.total_stores(zip)
+    total = BestbuyService.total_stores(zip)
+  end
 end

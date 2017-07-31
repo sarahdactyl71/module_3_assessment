@@ -4,7 +4,7 @@ class StoresController < ApplicationController
     if params[:search]
       zip = params[:search]
       @stores = Bestbuy.find_stores(zip)
-      @total = 
+      @total = Bestbuy.total_stores(zip(enums) { |row|  })
     end
   end
 
